@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ávra | Fragrance, Hair Care & Aroma Therapy</title>
+
+  <meta 
+    name="description" 
+    content="Ávra is a luxury self-care brand offering perfumes, hair care oils, scented candles, and aroma therapy products designed to awaken your inner aura." 
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <span class="logo-main">Ávra</span>
+        <span class="logo-sub">Awakening Your Inner Aura</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#fragrance">Fragrance</a>
+        <a href="#hair">Hair Care</a>
+        <a href="#aroma">Aroma Therapy</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-icons">
+        <span>⌕</span>
+        <span>♡</span>
+        <span>🛍</span>
+      </div>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero container" id="home">
+
+      <div class="hero-content">
+        <div class="eyebrow">Luxury self-care rituals</div>
+
+        <h1>Ávra</h1>
+
+        <div class="tagline">Awakening Your Inner Aura</div>
+
+        <p>
+          Ávra is a sanctuary of scent, self-care, and stillness. Thoughtfully crafted
+          fragrances, hair care oils, and calming aromas designed to elevate your daily rituals.
+        </p>
+
+        <div class="buttons">
+          <a href="#products" class="btn btn-primary">Shop Collection</a>
+          <a href="#about" class="btn btn-outline">Discover Ávra</a>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <strong>♧</strong>
+            Mindful Ingredients
+          </div>
+
+          <div class="feature">
+            <strong>♢</strong>
+            Made with Intention
+          </div>
+
+          <div class="feature">
+            <strong>♡</strong>
+            Elevate Your Everyday
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <div class="flower-bg"></div>
+
+        <div class="bottle">
+          <div class="bottle-label">
+            <div class="mini-logo">Ávra</div>
+            <h3>Vanille<br>De Mer</h3>
+            <small>For Her</small>
+            <small>Eau de Parfum</small>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Collections -->
+    <section id="collections">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Explore Our</div>
+          <h2>Featured Collections</h2>
+        </div>
+
+        <div class="collections">
+
+          <div class="collection-card" id="fragrance">
+            <div class="collection-image">
+              <div class="mini-perfume"></div>
+            </div>
+
+            <div class="collection-body">
+              <h3>Fragrance Collection</h3>
+              <p>
+                Captivating scents that speak to your essence and leave a soft unforgettable impression.
+              </p>
+              <a href="#products" class="shop-link">Shop Now →</a>
+            </div>
+          </div>
+
+          <div class="collection-card" id="hair">
+            <div class="collection-image">
+              <div class="mini-oil"></div>
+            </div>
+
+            <div class="collection-body">
+              <h3>Hair Care</h3>
+              <p>
+                Nourishing oils designed to care for the scalp, support shine, and enhance your hair ritual.
+              </p>
+              <a href="#products" class="shop-link">Shop Now →</a>
+            </div>
+          </div>
+
+          <div class="collection-card" id="aroma">
+            <div class="collection-image">
+              <div class="mini-candle"></div>
+            </div>
+
+            <div class="collection-body">
+              <h3>Aroma Therapy</h3>
+              <p>
+                Warm, elegant candles created to calm your space and transform your everyday mood.
+              </p>
+              <a href="#products" class="shop-link">Shop Now →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Loved by Our Community</div>
+          <h2>Best Sellers</h2>
+        </div>
+
+        <div class="products">
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-perfume"></div>
+            </div>
+            <h3>Vanille de Mer</h3>
+            <div class="type">Eau de Parfum</div>
+            <div class="price">EGP 650</div>
+            <button class="order-btn" onclick="orderProduct('Vanille de Mer')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-perfume"></div>
+            </div>
+            <h3>Dynamis Flame</h3>
+            <div class="type">Eau de Parfum</div>
+            <div class="price">EGP 650</div>
+            <button class="order-btn" onclick="orderProduct('Dynamis Flame')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-perfume"></div>
+            </div>
+            <h3>Freeya</h3>
+            <div class="type">Eau de Parfum</div>
+            <div class="price">EGP 650</div>
+            <button class="order-btn" onclick="orderProduct('Freeya')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-perfume"></div>
+            </div>
+            <h3>The Chosen</h3>
+            <div class="type">Eau de Parfum</div>
+            <div class="price">EGP 650</div>
+            <button class="order-btn" onclick="orderProduct('The Chosen')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-oil"></div>
+            </div>
+            <h3>Root Revival Oil</h3>
+            <div class="type">Hair Care Oil</div>
+            <div class="price">EGP 180</div>
+            <button class="order-btn" onclick="orderProduct('Root Revival Oil')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-candle"></div>
+            </div>
+            <h3>Vanilla Candle</h3>
+            <div class="type">Scented Candle</div>
+            <div class="price">EGP 220</div>
+            <button class="order-btn" onclick="orderProduct('Vanilla Candle')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-candle"></div>
+            </div>
+            <h3>Oud & Vanilla Candle</h3>
+            <div class="type">Scented Candle</div>
+            <div class="price">EGP 220</div>
+            <button class="order-btn" onclick="orderProduct('Oud & Vanilla Candle')">Order Now</button>
+          </div>
+
+          <div class="product-card">
+            <span class="heart">♡</span>
+            <div class="product-art">
+              <div class="mini-oil"></div>
+            </div>
+            <h3>Rosemary Oil</h3>
+            <div class="type">Hair Care Oil</div>
+            <div class="price">EGP 180</div>
+            <button class="order-btn" onclick="orderProduct('Rosemary Oil')">Order Now</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="mini-candle"></div>
+        </div>
+
+        <div class="about-text">
+          <div class="eyebrow">About Ávra</div>
+
+          <h2>Rooted in Ritual.<br>Made for You.</h2>
+
+          <p>
+            Ávra was created to bring elegance and intention to your daily rituals.
+            From fine fragrances to nurturing hair care and calming home aromas,
+            each creation is crafted to help you feel balanced, confident, and connected.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="contact-box">
+          <h2>Order Through Our DMs</h2>
+
+          <p>
+            Choose your favorite Ávra product and contact us directly for availability,
+            delivery details, and personalized recommendations.
+          </p>
+
+          <div class="buttons center-buttons">
+            <a class="btn btn-primary" href="https://www.instagram.com/avrabj" target="_blank">
+              Instagram
+            </a>
+
+            <a class="btn btn-outline" href="mailto:hello@avra.com">
+              Email Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+
+      <div>
+        <a href="#home" class="logo">
+          <span class="logo-main">Ávra</span>
+          <span class="logo-sub">Awakening Your Inner Aura</span>
+        </a>
+
+        <p class="footer-text">
+          Scent. Self-care. Stillness.<br>
+          Awaken your inner aura.
+        </p>
+
+        <p>@avrabj</p>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <a href="#products">All Products</a>
+        <a href="#fragrance">Fragrance</a>
+        <a href="#hair">Hair Care</a>
+        <a href="#aroma">Aroma Therapy</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <a href="#contact">Contact Us</a>
+        <a href="#contact">Shipping</a>
+        <a href="#contact">Returns</a>
+        <a href="#contact">FAQs</a>
+      </div>
+
+      <div>
+        <h4>Stay Connected</h4>
+        <p>Be the first to know about new arrivals, rituals, and offers.</p>
+        <a href="https://www.instagram.com/avrabj" target="_blank">
+          Instagram: @avrabj
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+      © 2026 Ávra. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
