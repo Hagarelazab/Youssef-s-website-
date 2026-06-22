@@ -865,3 +865,34 @@ footer a {
     border-radius: 30px;
   }
 }
+/* Real collection image update */
+
+.collection-photo {
+  padding: 0;
+  background: #f4eadf;
+  overflow: hidden;
+}
+
+.collection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Real product image update */
+
+.product-photo-box {
+  padding: 0;
+  background: #f4eadf;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
