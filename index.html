@@ -41,7 +41,7 @@
         <span>🛍</span>
       </div>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
 
     </div>
   </header>
@@ -87,7 +87,6 @@
         </div>
       </div>
 
-      <!-- Updated Real Hero Image -->
       <div class="hero-visual">
         <div class="hero-photo-frame">
           <img 
@@ -125,9 +124,14 @@
             </div>
           </div>
 
+          <!-- Updated Hair Care Card With Real Image -->
           <div class="collection-card" id="hair">
-            <div class="collection-image">
-              <div class="mini-oil"></div>
+            <div class="collection-image collection-photo">
+              <img 
+                src="root-revival-oil.jpg" 
+                alt="Ávra Root Revival Oil hair care product" 
+                class="collection-img"
+              />
             </div>
 
             <div class="collection-body">
@@ -214,8 +218,12 @@
 
           <div class="product-card">
             <span class="heart">♡</span>
-            <div class="product-art">
-              <div class="mini-oil"></div>
+            <div class="product-art product-photo-box">
+              <img 
+                src="root-revival-oil.jpg" 
+                alt="Ávra Root Revival Oil" 
+                class="product-img"
+              />
             </div>
             <h3>Root Revival Oil</h3>
             <div class="type">Hair Care Oil</div>
