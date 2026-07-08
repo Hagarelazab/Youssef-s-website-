@@ -352,14 +352,6 @@ section {
   position: relative;
 }
 
-.collection-card:nth-child(2) .collection-image {
-  background: linear-gradient(135deg, #dfc7ae, #fbf5ec);
-}
-
-.collection-card:nth-child(3) .collection-image {
-  background: linear-gradient(135deg, #d8c1a5, #f8eee4);
-}
-
 .collection-photo {
   padding: 0;
   background: #f4eadf;
@@ -402,73 +394,6 @@ section {
   font-weight: 700;
 }
 
-/* Product Shapes */
-
-.mini-perfume,
-.mini-oil,
-.mini-candle {
-  position: relative;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 18px 34px rgba(40, 25, 20, 0.14);
-}
-
-.mini-perfume {
-  width: 86px;
-  height: 122px;
-  border-radius: 10px 10px 18px 18px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-}
-
-.mini-perfume::before {
-  content: "";
-  position: absolute;
-  left: 26px;
-  top: -36px;
-  width: 34px;
-  height: 38px;
-  background: #171717;
-  border-radius: 8px 8px 4px 4px;
-}
-
-.mini-oil {
-  width: 70px;
-  height: 130px;
-  border-radius: 26px 26px 12px 12px;
-  background: linear-gradient(#784523, #2b1208);
-}
-
-.mini-oil::before {
-  content: "";
-  position: absolute;
-  top: -52px;
-  left: 16px;
-  width: 38px;
-  height: 58px;
-  background: linear-gradient(#fff, #f7f7f7);
-  border-radius: 28px 28px 8px 8px;
-  box-shadow: 0 24px 0 #d9a02e;
-}
-
-.mini-candle {
-  width: 100px;
-  height: 115px;
-  border-radius: 12px 12px 28px 28px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  background: linear-gradient(#fff, #efe4d0);
-}
-
-.mini-candle::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 46px;
-  width: 8px;
-  height: 20px;
-  border-radius: 50%;
-  background: #d38a22;
-  box-shadow: 0 0 18px rgba(211, 138, 34, 0.6);
-}
-
 /* Products */
 
 .products {
@@ -499,7 +424,7 @@ section {
   color: var(--lavender);
   font-family: Arial, sans-serif;
   font-size: 22px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .product-art {
@@ -586,13 +511,16 @@ section {
 .about-visual {
   min-height: 390px;
   border-radius: 38px;
-  background:
-    radial-gradient(circle at 25% 35%, rgba(255, 255, 255, 0.85), transparent 22%),
-    linear-gradient(135deg, #d7bda3, #f9efe7 55%, #fff);
+  background: #f4eadf;
   box-shadow: var(--shadow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+
+.about-img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about-text h2 {
@@ -776,5 +704,9 @@ footer a {
   .hero-photo-frame {
     height: 390px;
     border-radius: 30px;
+  }
+
+  .about-img {
+    height: 340px;
   }
 }
