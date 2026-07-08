@@ -2,460 +2,332 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Ávra | Fragrance, Hair Care & Aroma Therapy</title>
-
-  <meta 
-    name="description" 
-    content="Ávra is a luxury self-care brand offering perfumes, hair care oils, scented candles, body splash, and aroma therapy products designed to awaken your inner aura." 
-  />
-
+  <title>Ávra | Luxury Self-Care Brand</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Header -->
   <header class="site-header">
-    <div class="container nav">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo">Ávra</a>
 
-      <a href="#home" class="logo">
-        <span class="logo-main">Ávra</span>
-        <span class="logo-sub">Awakening Your Inner Aura</span>
-      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <nav class="nav-links" id="navLinks">
         <a href="#home">Home</a>
-        <a href="#fragrance">Fragrance</a>
-        <a href="#hair">Hair Care</a>
-        <a href="#aroma">Aroma Therapy</a>
+        <a href="#collections">Collections</a>
+        <a href="#products">Products</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="nav-icons">
-        <span>⌕</span>
-        <span>♡</span>
-        <span>🛍</span>
-      </div>
-
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-
     </div>
   </header>
 
-  <!-- Main -->
   <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Luxury self-care rituals</p>
+          <h1>Soft scents, warm rituals, and elegant care.</h1>
+          <p class="hero-text">
+            Discover Ávra’s curated collection of perfumes, candles, body splashes,
+            and hair care oils crafted for a refined everyday glow.
+          </p>
 
-    <!-- Hero Section -->
-    <section class="hero container" id="home">
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Shop Collection</a>
+            <button class="btn btn-secondary" onclick="orderProduct('Ávra Collection')">
+              Order on Instagram
+            </button>
+          </div>
+        </div>
 
-      <div class="hero-content">
-        <div class="eyebrow">Luxury self-care rituals</div>
+        <div class="hero-image-card">
+          <img src="hero-vanille.jpg" alt="Vanille de Mer perfume by Ávra" class="hero-img">
+          <div class="hero-badge">
+            <span>Signature</span>
+            <strong>Vanille de Mer</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h1>Ávra</h1>
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured collections</p>
+          <h2>Designed for your daily ritual</h2>
+          <p>
+            From warm perfumes to soft candles and nourishing oils, Ávra brings a calm luxury feeling to every moment.
+          </p>
+        </div>
 
-        <div class="tagline">Awakening Your Inner Aura</div>
+        <div class="collection-grid">
+          <article class="collection-card">
+            <img src="fragrance.jpeg" alt="Ávra perfume collection">
+            <div>
+              <h3>Fine Fragrance</h3>
+              <p>Elegant eau de parfum scents with a soft luxurious signature.</p>
+            </div>
+          </article>
 
+          <article class="collection-card">
+            <img src="Lavender.candel.jpeg" alt="Ávra scented candles">
+            <div>
+              <h3>Scented Candles</h3>
+              <p>Warm candle rituals made for cozy, elegant spaces.</p>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <img src="root-revival-oil.jpg" alt="Ávra hair care oils">
+            <div>
+              <h3>Hair Care Oils</h3>
+              <p>Nourishing oils for soft, healthy-looking hair.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Ávra products</p>
+          <h2>Shop our collection</h2>
+          <p>Choose your favorite ritual and order directly through Instagram.</p>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="hero-vanille.jpg" class="product-img" alt="Vanille de Mer Eau de Parfum">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Eau de Parfum</p>
+              <h3>Vanille de Mer</h3>
+              <p class="product-desc">A soft, warm fragrance with a luxurious vanilla-inspired touch.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 450</span>
+                <button class="order-btn" onclick="orderProduct('Vanille de Mer')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="fragrance.jpeg" class="product-img" alt="Saffron Smoke Eau de Parfum">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Eau de Parfum</p>
+              <h3>Saffron Smoke</h3>
+              <p class="product-desc">A bold, warm and elegant scent with a smoky luxurious signature.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 450</span>
+                <button class="order-btn" onclick="orderProduct('Saffron Smoke')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="fragrance.jpeg" class="product-img" alt="Freeya Eau de Parfum">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Eau de Parfum</p>
+              <h3>Freeya</h3>
+              <p class="product-desc">A graceful fragrance for soft, feminine everyday luxury.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 450</span>
+                <button class="order-btn" onclick="orderProduct('Freeya')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="fragrance.jpeg" class="product-img" alt="The Chosen Eau de Parfum">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Eau de Parfum</p>
+              <h3>The Chosen</h3>
+              <p class="product-desc">A refined perfume made for memorable moments and elegant presence.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 450</span>
+                <button class="order-btn" onclick="orderProduct('The Chosen')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="root-revival-oil.jpg" class="product-img" alt="Root Revival Oil Hair Care Oil">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Hair Care Oil</p>
+              <h3>Root Revival Oil</h3>
+              <p class="product-desc">A nourishing hair oil for softer, healthier-looking roots and lengths.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 180</span>
+                <button class="order-btn" onclick="orderProduct('Root Revival Oil')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="root-revival-oil.jpg" class="product-img" alt="Rosemary Oil Hair Care Oil">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Hair Care Oil</p>
+              <h3>Rosemary Oil</h3>
+              <p class="product-desc">A simple, elegant hair care ritual for scalp and hair nourishment.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 180</span>
+                <button class="order-btn" onclick="orderProduct('Rosemary Oil')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="Lavender.candel.jpeg" class="product-img" alt="Lavender Candle Scented Candle">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Scented Candle</p>
+              <h3>Lavender Candle</h3>
+              <p class="product-desc">A calming lavender candle for a peaceful and luxurious atmosphere.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 220</span>
+                <button class="order-btn" onclick="orderProduct('Lavender Candle')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="vanilla-candle.jpg" class="product-img" alt="Vanilla Candle Scented Candle">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Scented Candle</p>
+              <h3>Vanilla Candle</h3>
+              <p class="product-desc">A warm vanilla candle that adds softness and comfort to your space.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 220</span>
+                <button class="order-btn" onclick="orderProduct('Vanilla Candle')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="vanilla-candle.jpg" class="product-img" alt="Oud and Vanilla Candle Scented Candle">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Scented Candle</p>
+              <h3>Oud & Vanilla Candle</h3>
+              <p class="product-desc">A rich blend of oud and vanilla for a deeper luxury home scent.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 220</span>
+                <button class="order-btn" onclick="orderProduct('Oud & Vanilla Candle')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="blanc-body-splash.jpg" class="product-img" alt="Blanc Body Splash">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Body Splash</p>
+              <h3>Blanc</h3>
+              <p class="product-desc">A refreshing body splash with a clean, elegant and soft feel.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 650</span>
+                <button class="order-btn" onclick="orderProduct('Blanc Body Splash')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art product-photo-box">
+              <img src="body-splash.jpeg" class="product-img" alt="Ávra Body Splash">
+            </div>
+            <div class="product-info">
+              <p class="product-category">Body Splash</p>
+              <h3>Body Splash</h3>
+              <p class="product-desc">A light and fresh body splash for a soft daily scent ritual.</p>
+              <div class="product-bottom">
+                <span class="price">EGP 650</span>
+                <button class="order-btn" onclick="orderProduct('Body Splash')">Order Now</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About Ávra</p>
+          <h2>Luxury made softer.</h2>
+        </div>
+
+        <div>
+          <p>
+            Ávra is a luxury self-care brand created for people who love soft beauty,
+            elegant fragrance, and calm daily rituals. Every product is selected to feel
+            refined, warm, and beautifully personal.
+          </p>
+          <p>
+            Whether you are choosing a perfume, lighting a candle, refreshing with a body splash,
+            or caring for your hair, Ávra turns small moments into something special.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <p class="eyebrow">Order now</p>
+        <h2>Ready to choose your Ávra ritual?</h2>
         <p>
-          Ávra is a sanctuary of scent, self-care, and stillness. Thoughtfully crafted
-          fragrances, hair care oils, body splash, and calming aromas designed to elevate your daily rituals.
+          Send us a message on Instagram to order your favorite product or ask about availability.
         </p>
 
-        <div class="buttons">
-          <a href="#products" class="btn btn-primary">Shop Collection</a>
-          <a href="#about" class="btn btn-outline">Discover Ávra</a>
-        </div>
+        <div class="contact-actions">
+          <button class="btn btn-primary" onclick="orderProduct('Ávra Product')">
+            Order Through Instagram
+          </button>
 
-        <div class="features">
-          <div class="feature">
-            <strong>♧</strong>
-            Mindful Ingredients
-          </div>
-
-          <div class="feature">
-            <strong>♢</strong>
-            Made with Intention
-          </div>
-
-          <div class="feature">
-            <strong>♡</strong>
-            Elevate Your Everyday
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-photo-frame">
-          <img 
-            src="hero-vanille.jpg" 
-            alt="Ávra Vanille de Mer perfume" 
-            class="hero-img"
-          />
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Collections -->
-    <section id="collections">
-      <div class="container">
-
-        <div class="section-title">
-          <div class="small">Explore Our</div>
-          <h2>Featured Collections</h2>
-        </div>
-
-        <div class="collections">
-
-          <div class="collection-card" id="fragrance">
-            <div class="collection-image collection-photo">
-              <img 
-                src="fragrance.jpeg" 
-                alt="Ávra fragrance collection" 
-                class="collection-img"
-              />
-            </div>
-
-            <div class="collection-body">
-              <h3>Fragrance Collection</h3>
-              <p>
-                Captivating perfumes and body splashes that leave a soft unforgettable impression.
-              </p>
-              <a href="#products" class="shop-link">Shop Now →</a>
-            </div>
-          </div>
-
-          <div class="collection-card" id="hair">
-            <div class="collection-image collection-photo">
-              <img 
-                src="root-revival-oil.jpg" 
-                alt="Ávra Root Revival Oil hair care product" 
-                class="collection-img"
-              />
-            </div>
-
-            <div class="collection-body">
-              <h3>Hair Care</h3>
-              <p>
-                Nourishing oils designed to care for the scalp, support shine, and enhance your hair ritual.
-              </p>
-              <a href="#products" class="shop-link">Shop Now →</a>
-            </div>
-          </div>
-
-          <div class="collection-card" id="aroma">
-            <div class="collection-image collection-photo">
-              <img 
-                src="Lavender.candel.jpeg" 
-                alt="Ávra Lavender Scented Candle" 
-                class="collection-img"
-              />
-            </div>
-
-            <div class="collection-body">
-              <h3>Aroma Therapy</h3>
-              <p>
-                Warm, elegant candles created to calm your space and transform your everyday mood.
-              </p>
-              <a href="#products" class="shop-link">Shop Now →</a>
-            </div>
-          </div>
-
+          <a class="btn btn-secondary" href="https://www.instagram.com/avrabj/" target="_blank" rel="noopener noreferrer">
+            Visit Instagram
+          </a>
         </div>
       </div>
     </section>
-
-    <!-- Products -->
-    <section id="products">
-      <div class="container">
-
-        <div class="section-title">
-          <div class="small">Loved by Our Community</div>
-          <h2>Best Sellers</h2>
-        </div>
-
-        <div class="products">
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="hero-vanille.jpg" 
-                alt="Ávra Vanille de Mer perfume" 
-                class="product-img"
-              />
-            </div>
-            <h3>Vanille de Mer</h3>
-            <div class="type">Eau de Parfum</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('Vanille de Mer')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="fragrance.jpeg" 
-                alt="Ávra Dynamis Flame perfume" 
-                class="product-img"
-              />
-            </div>
-            <h3>Dynamis Flame</h3>
-            <div class="type">Eau de Parfum</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('Dynamis Flame')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="fragrance.jpeg" 
-                alt="Ávra Freeya perfume" 
-                class="product-img"
-              />
-            </div>
-            <h3>Freeya</h3>
-            <div class="type">Eau de Parfum</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('Freeya')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="fragrance.jpeg" 
-                alt="Ávra The Chosen perfume" 
-                class="product-img"
-              />
-            </div>
-            <h3>The Chosen</h3>
-            <div class="type">Eau de Parfum</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('The Chosen')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="root-revival-oil.jpg" 
-                alt="Ávra Root Revival Oil" 
-                class="product-img"
-              />
-            </div>
-            <h3>Root Revival Oil</h3>
-            <div class="type">Hair Care Oil</div>
-            <div class="price">EGP 180</div>
-            <button class="order-btn" onclick="orderProduct('Root Revival Oil')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="Lavender.candel.jpeg" 
-                alt="Ávra Lavender Candle" 
-                class="product-img"
-              />
-            </div>
-            <h3>Lavender Candle</h3>
-            <div class="type">Scented Candle</div>
-            <div class="price">EGP 220</div>
-            <button class="order-btn" onclick="orderProduct('Lavender Candle')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="vanilla-candle.jpg" 
-                alt="Ávra Vanilla Candle" 
-                class="product-img"
-              />
-            </div>
-            <h3>Vanilla Candle</h3>
-            <div class="type">Scented Candle</div>
-            <div class="price">EGP 220</div>
-            <button class="order-btn" onclick="orderProduct('Vanilla Candle')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="vanilla-candle.jpg" 
-                alt="Ávra Oud and Vanilla Candle" 
-                class="product-img"
-              />
-            </div>
-            <h3>Oud & Vanilla Candle</h3>
-            <div class="type">Scented Candle</div>
-            <div class="price">EGP 220</div>
-            <button class="order-btn" onclick="orderProduct('Oud & Vanilla Candle')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="root-revival-oil.jpg" 
-                alt="Ávra Rosemary Oil" 
-                class="product-img"
-              />
-            </div>
-            <h3>Rosemary Oil</h3>
-            <div class="type">Hair Care Oil</div>
-            <div class="price">EGP 180</div>
-            <button class="order-btn" onclick="orderProduct('Rosemary Oil')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="blanc-body-splash.jpg" 
-                alt="Ávra Blanc Body Splash" 
-                class="product-img"
-              />
-            </div>
-            <h3>Blanc</h3>
-            <div class="type">Body Splash</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('Blanc Body Splash')">Order Now</button>
-          </div>
-
-          <div class="product-card">
-            <span class="heart">♡</span>
-            <div class="product-art product-photo-box">
-              <img 
-                src="body-splash.jpeg" 
-                alt="Ávra Body Splash" 
-                class="product-img"
-              />
-            </div>
-            <h3>Body Splash</h3>
-            <div class="type">Body Splash</div>
-            <div class="price">EGP 650</div>
-            <button class="order-btn" onclick="orderProduct('Body Splash')">Order Now</button>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-      <div class="container about-grid">
-
-        <div class="about-visual">
-          <img 
-            src="Lavender.candel.jpeg" 
-            alt="Ávra candle ritual" 
-            class="about-img"
-          />
-        </div>
-
-        <div class="about-text">
-          <div class="eyebrow">About Ávra</div>
-
-          <h2>Rooted in Ritual.<br>Made for You.</h2>
-
-          <p>
-            Ávra was created to bring elegance and intention to your daily rituals.
-            From fine fragrances to nurturing hair care, body splash, and calming home aromas,
-            each creation is crafted to help you feel balanced, confident, and connected.
-          </p>
-
-          <a href="#contact" class="btn btn-primary">Contact Us</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-
-        <div class="contact-box">
-          <h2>Order Through Our DMs</h2>
-
-          <p>
-            Choose your favorite Ávra product and contact us directly for availability,
-            delivery details, and personalized recommendations.
-          </p>
-
-          <div class="buttons center-buttons">
-            <a class="btn btn-primary" href="https://www.instagram.com/avrabj" target="_blank" rel="noopener noreferrer">
-              Instagram
-            </a>
-
-            <a class="btn btn-outline" href="mailto:hello@avra.com">
-              Email Us
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-grid">
-
-      <div>
-        <a href="#home" class="logo">
-          <span class="logo-main">Ávra</span>
-          <span class="logo-sub">Awakening Your Inner Aura</span>
-        </a>
-
-        <p class="footer-text">
-          Scent. Self-care. Stillness.<br>
-          Awaken your inner aura.
-        </p>
-
-        <p>@avrabj</p>
-      </div>
-
-      <div>
-        <h4>Shop</h4>
-        <a href="#products">All Products</a>
-        <a href="#fragrance">Fragrance</a>
-        <a href="#hair">Hair Care</a>
-        <a href="#aroma">Aroma Therapy</a>
-      </div>
-
-      <div>
-        <h4>Customer Care</h4>
-        <a href="#contact">Contact Us</a>
-        <a href="#contact">Shipping</a>
-        <a href="#contact">Returns</a>
-        <a href="#contact">FAQs</a>
-      </div>
-
-      <div>
-        <h4>Stay Connected</h4>
-        <p>Be the first to know about new arrivals, rituals, and offers.</p>
-        <a href="https://www.instagram.com/avrabj" target="_blank" rel="noopener noreferrer">
-          Instagram: @avrabj
-        </a>
-      </div>
-
-    </div>
-
-    <div class="container copyright">
-      © 2026 Ávra. All rights reserved.
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-logo">Ávra</p>
+      <p>Luxury self-care rituals.</p>
+      <a href="https://www.instagram.com/avrabj/" target="_blank" rel="noopener noreferrer">@avrabj</a>
     </div>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
