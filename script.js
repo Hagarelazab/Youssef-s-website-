@@ -1,14 +1,22 @@
+const INSTAGRAM_PROFILE_URL = "https://www.instagram.com/avrabyj?igsh=a2poNHdnMWwyM253";
+const INSTAGRAM_DM_URL = "https://ig.me/m/avrabyj";
+
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
-  const menuBtn = document.querySelector(".menu-btn");
 
-  if (!navLinks) return;
-
-  const isOpen = navLinks.classList.toggle("active");
-
-  if (menuBtn) {
-    menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  if (navLinks) {
+    navLinks.classList.toggle("active");
   }
+}
+
+function orderProduct(productName) {
+  const message = `Hello Ávra, I would like to order: ${productName}`;
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(message).catch(function () {});
+  }
+
+  window.open(INSTAGRAM_DM_URL, "_blank", "noopener,noreferrer");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,29 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-function orderProduct(productName) {
-  const instagramUrl = "https://ig.me/m/avrabj";
-
-  const orderMessage =
-    "Hello Ávra, I want to order " +
-    productName +
-    ". Please send me availability and delivery details.";
-
-  window.open(instagramUrl, "_blank", "noopener,noreferrer");
-
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard
-      .writeText(orderMessage)
-      .then(function () {
-        alert(
-          "Your order message has been copied. Paste it in Ávra Instagram DM."
-        );
-      })
-      .catch(function () {
-        alert("Copy this message and send it on Instagram:\n\n" + orderMessage);
-      });
-  } else {
-    alert("Copy this message and send it on Instagram:\n\n" + orderMessage);
-  }
-}
